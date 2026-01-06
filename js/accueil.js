@@ -69,7 +69,7 @@ const translations = {
     bio_text:
       "2nd year student in the Informatique department at the IUT of Lens, I'm currently looking for an 8 to 10 weeks internship from April 13. Passionate about coding, virtual environments and japanese culture, I'm very curious and dynamic, and I'm looking further to learn new languages and softwares and to develop my skills.",
     download_cv: "DOWNLOAD PLAYER'S PERSONAL DATA (CV)",
-    cv_path: "../docs/CV_Wissem_Nacer_EN.pdf",
+    cv_path: "docs/CV_Wissem_Nacer_EN.pdf",
     cv_name: "CV_Wissem_Nacer_EN",
     skills_title: "SKILLS & ABILITIES",
     lang_title: "Languages",
@@ -116,7 +116,7 @@ const translations = {
     bio_text:
       "Étudiant en 2ème année au département Informatique de l'IUT de Lens, je suis actuellement à la recherche d'un stage de 8 à 10 semaines à partir du 13 avril. Passionné par le code, les environnements virtuels et la culture japonaise, je suis très curieux et dynamique, et je cherche toujours à apprendre de nouveaux langages et logiciels pour développer mes compétences.",
     download_cv: "TÉLÉCHARGER DONNÉES PERSONNELLES (CV)",
-    cv_path: "../docs/CV_Wissem_Nacer_FR.pdf",
+    cv_path: "docs/CV_Wissem_Nacer_FR.pdf",
     cv_name: "CV_Wissem_Nacer_FR",
     skills_title: "COMPÉTENCES & CAPACITÉS",
     lang_title: "Langues",
