@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/accueil.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio - Wissem NACER</title>
+  </head>
+  <body>
+    <div class="language-switcher">
+      <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+      <span class="separator">|</span>
+      <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+    </div>
+
+    <section id="intro-screen">
+      <div class="player">
+        <h2 class="donnees" data-lang="collect_data">
+          COLLECTING PLAYER'S DATA
+        </h2>
+      </div>
+      <div class="skills">
+        <h2 class="donnees" data-lang="dev_skills">
+          DEVELOPPING PLAYER'S SKILLS
+        </h2>
+      </div>
+      <div class="quests">
+        <h2 class="donnees" data-lang="init_quests">INITIALIZING QUESTS</h2>
+      </div>
+
+      <div class="loading">
+        <div class="loading-text">
+          <h1>
+            <span data-lang="sys_loading">SYSTEM LOADING</span
+            ><span class="dot">.</span><span class="dot">.</span
+            ><span class="dot">.</span>
+          </h1>
+        </div>
+        <a class="ready-btn" id="start-btn">
+          <h3 data-lang="sys_ready">SYSTEM READY</h3>
+          <p data-lang="click_launch">Click here to launch</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="main-dashboard" class="hidden">
+      <h1 class="dashboard-title" data-lang="main_menu">MAIN MENU</h1>
+
+      <div class="dashboard-grid">
+        <div class="card" onclick="openModal('modal-profile')">
+          <div class="card-icon">
+            <img src="img/profile-icon.png" alt="" />
+          </div>
+          <h3 data-lang="player_status">PLAYER'S STATUS</h3>
+          <p data-lang="who_am_i">Who am I ?</p>
+        </div>
+
+        <div class="card" onclick="openModal('modal-skills')">
+          <div class="card-icon">
+            <img src="img/skills-icon.png" alt="" />
+          </div>
+          <h3 data-lang="skills_abilities">SKILLS & ABILITIES</h3>
+          <p data-lang="my_skills">My skills</p>
+        </div>
+
+        <div class="card" onclick="openModal('modal-quests')">
+          <div class="card-icon">
+            <img src="img/quests-icon.png" alt="" />
+          </div>
+          <h3 data-lang="quest_log">QUEST LOG</h3>
+          <p data-lang="my_projects">My projects</p>
+        </div>
+
+        <div class="card" onclick="openModal('modal-contact')">
+          <div class="card-icon">
+            <img src="img/contact-icon.png" alt="" />
+          </div>
+          <h3 data-lang="send_msg">SEND MESSAGE</h3>
+          <p data-lang="contact_me">Contact me</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal-profile" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-profile')"
+          >&times;</span
+        >
+        <h2 data-lang="char_status">PLAYER'S STATUS</h2>
+        <div class="modal-body">
+          <p>Pseudo : Wissem NACER</p>
+          <p data-lang="class_role">Class : Fullstack Developper</p>
+          <p data-lang="level">Level : Beginner</p>
+          <p data-lang="bio_text">
+            Bio : 2nd year student in the Informatique department at the IUT of
+            Lens, I'm currently looking for an 8 to 10 weeks internship from
+            April 13. Passionate about coding, virtual environments and japanese
+            culture, I'm very curious and dynamic, and I'm looking further to
+            learn new languages and softwares and to develop my skills.
+          </p>
+        </div>
+        <a
+          href="docs/CV_Wissem_Nacer_EN.pdf"
+          download="CV_Wissem_Nacer_EN"
+          class="mission-btn download-btn"
+          data-lang="download_cv"
+          data-link="cv_path"
+          data-filename="cv_name"
+        >
+          DOWNLOAD PLAYER'S PERSONNAL DATA (CV)
+        </a>
+      </div>
+    </div>
+
+    <div id="modal-skills" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-skills')"
+          >&times;</span
+        >
+        <h2 data-lang="skills_title">SKILLS & ABILITIES</h2>
+        <div class="modal-body">
+          <h2>Web</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>Flask</li>
+          </ul>
+          <h2>Software Engineering</h2>
+          <ul>
+            <li>Java/JavaFX</li>
+            <li>Bash</li>
+            <li>Python</li>
+          </ul>
+          <h2 data-lang="db_h2">DataBase</h2>
+          <ul>
+            <li>SQL</li>
+            <li>PLPGSQL</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <h2 data-lang="lang_title">Languages</h2>
+          <ul>
+            <li data-lang="fr_lang">French (Mothertongue)</li>
+            <li data-lang="en_lang">English (Fluent)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-quests" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-quests')"
+          >&times;</span
+        >
+
+        <h2 id="quest-log" data-lang="quest_log_title">QUEST LOG</h2>
+
+        <div class="modal-body">
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="img/cinehub.png"
+                alt="Aperçu CineHub"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h3 class="project-title">CineHub</h3>
+                <p class="project-desc" data-lang="desc_cinehub">
+                  An application for managing films/series with a system of
+                  marks.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Laravel</span>
+                  <span class="tech-badge">PHP</span>
+                  <span class="tech-badge">HTML/CSS</span>
+                  <span class="tech-badge">MYSQL</span>
+                </div>
+                <a
+                  href="https://gitlab.univ-artois.fr/tom_billet/cine-hub.git"
+                  target="_blank"
+                  class="mission-btn"
+                  data-lang="access_data"
+                >
+                  ACCESS DATA (GITLAB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="img/blog-marathon.png"
+                alt="Aperçu blog musical"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h3 class="project-title">Music Blog</h3>
+                <p class="project-desc" data-lang="desc_music">
+                  Creation of a music blog on a theme of Disco.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Laravel</span>
+                  <span class="tech-badge">PHP</span>
+                  <span class="tech-badge">HTML/CSS</span>
+                </div>
+                <a
+                  href="https://gitlab.univ-artois.fr/tom_billet/code-marathon-2025.git"
+                  target="_blank"
+                  class="mission-btn"
+                  data-lang="access_data"
+                >
+                  ACCESS DATA (GITLAB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="img/pacman.png"
+                alt="Aperçu Pacman"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h3 class="project-title">Pacman</h3>
+                <p class="project-desc" data-lang="desc_pacman">
+                  Recreation of a pacman game using JavaFX.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Java</span>
+                  <span class="tech-badge">JavaFX</span>
+                </div>
+                <a
+                  href="https://gitlab.univ-artois.fr/tom_billet/projet-pacman.git"
+                  target="_blank"
+                  class="mission-btn"
+                  data-lang="access_data"
+                >
+                  ACCESS DATA (GITLAB)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="img/lens-symphony.png"
+                alt="Aperçu LensSymphony"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h3 class="project-title">LenSymphony</h3>
+                <p class="project-desc" data-lang="desc_lens">
+                  Development of a music synthesizer website.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Laravel</span>
+                  <span class="tech-badge">PHP</span>
+                  <span class="tech-badge">HTML/CSS</span>
+                </div>
+                <a
+                  href="https://gitlab.univ-artois.fr/tom_billet/lensymphony-web.git"
+                  target="_blank"
+                  class="mission-btn"
+                  data-lang="access_data"
+                >
+                  ACCESS DATA (GITLAB)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-contact" class="modal">
+      <div class="modal-content contact-modal">
+        <span class="close-btn" onclick="closeModal('modal-contact')"
+          >&times;</span
+        >
+        <h2 data-lang="contact_title">CONTACT ME</h2>
+
+        <div class="contact-container">
+          <div class="comms-channels">
+            <h3 data-lang="my_links">MY LINKS</h3>
+            <div class="channels-grid">
+              <a
+                href="https://www.linkedin.com/in/wissem-nacer-76a9a3316/"
+                target="_blank"
+                class="channel-btn"
+              >
+                <span class="channel-icon"
+                  ><img src="img/linkedin-icon.png" alt="Logo linkedin"
+                /></span>
+                LINKEDIN
+              </a>
+              <a
+                href="https://github.com/Ceptick"
+                target="_blank"
+                class="channel-btn"
+              >
+                <span class="channel-icon"
+                  ><img src="img/github-icon.png" alt="Logo github"
+                /></span>
+                GITHUB
+              </a>
+              <a href="mailto:wissemnacer2002@gmail.com" class="channel-btn">
+                <span class="channel-icon"
+                  ><img src="img/email-icon.png" alt="Logo email"
+                /></span>
+                EMAIL
+              </a>
+            </div>
+          </div>
+
+          <hr class="separator" />
+
+          <div class="transmission-form">
+            <h3 data-lang="send_chat">SEND A MESSAGE IN THE CHAT</h3>
+            <form action="https://formspree.io/f/xojvbzbo" method="POST">
+              <div class="input-group">
+                <label data-lang="label_name">PSEUDO (Name)</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  data-lang="input_id"
+                  placeholder="Enter your ID"
+                />
+              </div>
+
+              <div class="input-group">
+                <label data-lang="label_email">EMAIL (Private)</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  data-lang="input_email"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="input-group">
+                <label data-lang="label_msg">MESSAGE (Private)</label>
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  data-lang="textarea_message"
+                  placeholder="Input your private message..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="mission-btn send-btn"
+                data-lang="btn_send"
+              >
+                INITIATE TRANSMISSION
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/accueil.js"></script>
+  </body>
+</html>
