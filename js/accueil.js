@@ -169,14 +169,13 @@ function setLanguage(lang) {
       element.href = translations[lang][key];
     }
   });
+
+  const filenamesToTranslate = document.querySelectorAll("[data-filename]");
+  filenamesToTranslate.forEach((element) => {
+    const key = element.getAttribute("data-filename");
+    if (translations[lang][key]) {
+      element.setAttribute("download", translations[lang][key]);
+    }
+  });
 }
-
-const filenamesToTranslate = document.querySelectorAll("[data-filename]");
-filenamesToTranslate.forEach((element) => {
-  const key = element.getAttribute("data-filename");
-  if (translations[lang][key]) {
-    element.setAttribute("download", translations[lang][key]);
-  }
-});
-
 setLanguage("en");
